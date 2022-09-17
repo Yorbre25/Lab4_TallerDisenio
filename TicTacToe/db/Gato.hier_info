@@ -1,0 +1,8 @@
+|Turno
+clk => estadoActual.CLK
+rst => estadoActual.ACLR
+jugado => always1.IN0
+tiempo => always1.IN1
+salida <= estadoActual.DB_MAX_OUTPUT_PORT_TYPE
+
+

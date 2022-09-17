@@ -1,0 +1,13 @@
+module Cont #(parameter N=6) (input boton, input reset, output [N-1:0] s);
+	logic [N-1:0] sAux = 2**N-1;
+
+
+	always_ff @(posedge boton, posedge reset)
+		begin
+		if(reset)
+			sAux = 2**N-1;
+		else
+			sAux = sAux-1;
+		end
+	assign s = sAux;
+endmodule 

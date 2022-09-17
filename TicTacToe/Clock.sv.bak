@@ -1,0 +1,6 @@
+module clock(output clk);
+	clk = 0;
+	always
+		clk = ~clk;
+		#5;
+endmodule 
