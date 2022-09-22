@@ -25,4 +25,4 @@ module Ganador (input clk, rst, entrada, output salida);
 		
 	//Logica de las salidas
 	assign salida = (estadoActual==2);
-endmodule 
+endmodule

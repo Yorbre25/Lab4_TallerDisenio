@@ -6,10 +6,10 @@
 //		tiempo 1: Se acabó el tiempo
 // Salida:
 //		salida: El turno actual
-module Turno(input clk, rst, jugado, tiempo, output salida);
+module Turno(input clk, rst, input jugado, output salida);
 	logic estadoActual, estadoSiguiente;
 //	assign entrada = jugado | tiempo;
-	
+
 	//Logica estado acutal (secuencial)
 	always_ff @(posedge clk or posedge rst)
 		if(rst)
@@ -21,11 +21,11 @@ module Turno(input clk, rst, jugado, tiempo, output salida);
 	
 	always_comb
 		case(estadoActual)
-			0: if (jugado | tiempo) estadoSiguiente = 1; else estadoSiguiente = 0;
-			1: if (jugado | tiempo) estadoSiguiente = 0; else estadoSiguiente = 1;
+			0: if (jugado) estadoSiguiente = 1; else estadoSiguiente = 0;
+			1: if (jugado) estadoSiguiente = 0; else estadoSiguiente = 1;
 			default: estadoSiguiente = 0;
 		endcase
 		
-	//Logica de las salidas
+	//Logica de las salidas 
 	assign salida = estadoActual;
 endmodule 

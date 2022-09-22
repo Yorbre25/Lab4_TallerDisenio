@@ -5,7 +5,7 @@ module Contador (input reset, output s);
 	
 	always
 		begin
-		clk = ~clk; #5;
+		clk = ~clk; #1;
 		end
 
 	always_ff @(posedge clk, posedge reset)
@@ -13,7 +13,16 @@ module Contador (input reset, output s);
 		if(reset)
 			cont = 30;
 		else
+			begin
 			cont = cont-1;
+			
+			if(cont == 0)
+				begin
+				sAux  = 1;
+				cont = 30;
+				end
+			end
 		end
+		
 	assign s = sAux;
 endmodule 

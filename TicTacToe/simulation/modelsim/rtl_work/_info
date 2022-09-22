@@ -1,63 +1,60 @@
 m255
 K4
 z2
-!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
+Z0 dC:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
 vContador
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1663428276
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1663694553
 !i10b 1
-!s100 =5H7aiQJ`a<FJVjNHfl:X0
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IHP5[>c5CbS12XE42:C4Ce3
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 c_[eC09Bl78dPh4B=iHn_2
+I5]1@6E6AXcQ9aTMX0DUz]0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Contador_sv_unit
 S1
 R0
-w1663428202
-8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
-FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
-!i122 0
-L0 1 19
-Z5 OV;L;2020.1;71
+w1663694524
+8C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
+FC:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
+L0 1
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1663428275.000000
-!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
+Z5 !s108 1663694553.000000
+!s107 C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe
+Z7 !s92 -sv -work work +incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe
 Z8 tCvgOpt 0
 n@contador
 vTest
 R1
 R2
 !i10b 1
-!s100 ]:7mMjTQ9V`h46lSKMz5A2
+!s100 BM3mW@hBGAgjCf0f1i__T3
+IB1GlA1hWZHG:35<[MK^=h1
 R3
-IA]j1z1CNnQmIX<5`hdR?A2
-R4
+!s105 Test_sv_unit
 S1
 R0
-w1663428072
-8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv
-FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv
-!i122 1
-L0 1 11
-R5
+w1663694526
+8C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv
+FC:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv
+L0 1
+R4
 r1
 !s85 0
 31
-!s108 1663428276.000000
-!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv|
+R5
+!s107 C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv|
 !i113 1
 R6
 R7

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Gato
-Sat Sep 17 10:51:53 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Thu Sep 22 10:23:43 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -13,19 +13,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |Turnos|estadoActual
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -35,18 +36,17 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Sep 17 10:51:53 2022       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 22 10:23:43 2022       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
-; Top-level Entity Name           ; Turno                                       ;
+; Top-level Entity Name           ; Turnos                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 1                                           ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Turno              ; Gato               ;
+; Top-level entity name                                                           ; Turnos             ; Gato               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,52 +155,52 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; Turno.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turno.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; Turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1            ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 1            ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 0            ;
-;     -- 5 input functions                    ; 0            ;
-;     -- 4 input functions                    ; 0            ;
-;     -- <=3 input functions                  ; 1            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 1            ;
-;                                             ;              ;
-; I/O pins                                    ; 5            ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; estadoActual ;
-; Maximum fan-out                             ; 2            ;
-; Total fan-out                               ; 12           ;
-; Average fan-out                             ; 1.00         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 1              ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 1              ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 0              ;
+;     -- 5 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 0              ;
+;     -- <=3 input functions                  ; 1              ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 1              ;
+;                                             ;                ;
+; I/O pins                                    ; 5              ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; estadoActual.1 ;
+; Maximum fan-out                             ; 2              ;
+; Total fan-out                               ; 12             ;
+; Average fan-out                             ; 1.00           ;
++---------------------------------------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,9 +208,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Turno                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 5    ; 0            ; |Turno              ; Turno       ; work         ;
+; |Turnos                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 5    ; 0            ; |Turnos             ; Turnos      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------+
+; State Machine - |Turnos|estadoActual ;
++----------------+---------------------+
+; Name           ; estadoActual.1      ;
++----------------+---------------------+
+; estadoActual.0 ; 0                   ;
+; estadoActual.1 ; 1                   ;
++----------------+---------------------+
 
 
 +------------------------------------------------------+
@@ -250,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -259,24 +270,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 17 10:51:29 2022
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Sep 22 10:23:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
-    Info (12023): Found entity 1: Contador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
+    Info (12023): Found entity 1: Contador File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file test.sv
-    Info (12023): Found entity 1: Test File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file clock.sv
-    Info (12023): Found entity 1: Clock File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Clock.sv Line: 1
+    Info (12023): Found entity 1: Test File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file turno.sv
-    Info (12023): Found entity 1: Turno File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turno.sv Line: 9
+    Info (12023): Found entity 1: Turno File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Turno.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
-    Info (12023): Found entity 1: Ganador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 7
+    Info (12023): Found entity 1: Ganador File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file mover.sv
-    Info (12023): Found entity 1: Mover File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv Line: 7
-Info (12127): Elaborating entity "Turno" for the top level hierarchy
+    Info (12023): Found entity 1: Mover File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv Line: 7
+Info (12021): Found 0 design units, including 0 entities, in source file ganadorblock.sv
+Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
+    Info (12023): Found entity 1: Turnos File: C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv Line: 1
+Info (12127): Elaborating entity "Turnos" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -285,9 +297,9 @@ Info (21057): Implemented 6 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Sat Sep 17 10:51:53 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Thu Sep 22 10:23:43 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
