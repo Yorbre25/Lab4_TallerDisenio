@@ -1,5 +1,48 @@
 
-State Machine - |Turnos|estadoActual
-Name estadoActual.1 
-estadoActual.0 0 
-estadoActual.1 1 
+State Machine - |GanadorBlock|Ganador:diag1|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:diag0|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:column2|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:column1|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:column0|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:fila2|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:fila1|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
+
+State Machine - |GanadorBlock|Ganador:fila0|estadoActual
+Name estadoActual.00 estadoActual.10 estadoActual.01 
+estadoActual.00 0 0 0 
+estadoActual.01 1 0 1 
+estadoActual.10 1 1 0 
