@@ -1,4 +1,4 @@
-module GanadorBlock(input clk, rst, input [3:0]posicion, revisar, output gana);
+module GanadorBlock(input clk, rst, input [3:0]posicion, output gana);
 	logic [7:0] entrada;
 	logic [7:0] ganaAux;
 	

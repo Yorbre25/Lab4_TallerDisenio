@@ -1,0 +1,21 @@
+module gato(input clk, rst, movimiento, seleccion);
+	logic [3:0] salidaMov;
+	logic gana;
+	logic movimientoAux;
+		always_ff@(posedge movimiento, posedge rst, negedge movimiento)
+		if(rst)
+			movimientoAux = 0;
+		if(movimiento)
+			movimientoAux = 1;
+		if (!movimiento)
+			movimientoAux = 0; 
+		end
+			
+	Mover mover(clk, rst, movimientoAux, salidaMov);
+	PosicionesOcupadas ocupadas(seleccion, rst, salidaMov, ocupado);
+	Turnos turnos(clk, rst, ocupado, 0, jugador);
+	GanadorBlock ganadorB(clk, rst, salidaMov, gana);
+	
+
+
+endmodule 

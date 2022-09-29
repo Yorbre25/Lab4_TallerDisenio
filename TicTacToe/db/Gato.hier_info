@@ -1,122 +1,28 @@
-|GanadorBlock
-clk => clk.IN8
-rst => rst.IN8
-posicion[0] => Decoder0.IN3
-posicion[0] => Decoder1.IN3
-posicion[0] => Decoder2.IN3
-posicion[0] => Decoder3.IN3
-posicion[0] => Decoder4.IN3
-posicion[0] => Decoder5.IN3
-posicion[0] => Decoder6.IN3
-posicion[0] => Decoder7.IN3
-posicion[1] => Decoder0.IN2
-posicion[1] => Decoder1.IN2
-posicion[1] => Decoder2.IN2
-posicion[1] => Decoder3.IN2
-posicion[1] => Decoder4.IN2
-posicion[1] => Decoder5.IN2
-posicion[1] => Decoder6.IN2
-posicion[1] => Decoder7.IN2
-posicion[2] => Decoder0.IN1
-posicion[2] => Decoder1.IN1
-posicion[2] => Decoder2.IN1
-posicion[2] => Decoder3.IN1
-posicion[2] => Decoder4.IN1
-posicion[2] => Decoder5.IN1
-posicion[2] => Decoder6.IN1
-posicion[2] => Decoder7.IN1
-posicion[3] => Decoder0.IN0
-posicion[3] => Decoder1.IN0
-posicion[3] => Decoder2.IN0
-posicion[3] => Decoder3.IN0
-posicion[3] => Decoder4.IN0
-posicion[3] => Decoder5.IN0
-posicion[3] => Decoder6.IN0
-posicion[3] => Decoder7.IN0
-revisar[0] => ~NO_FANOUT~
-revisar[1] => ~NO_FANOUT~
-revisar[2] => ~NO_FANOUT~
-revisar[3] => ~NO_FANOUT~
-gana <= always1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:fila0
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:fila1
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:fila2
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:column0
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:column1
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:column2
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:diag0
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|GanadorBlock|Ganador:diag1
-clk => estadoActual~1.DATAIN
-rst => estadoActual~3.DATAIN
-entrada => Selector1.IN3
-entrada => estadoSiguiente.10.DATAB
-entrada => Selector0.IN2
-entrada => Selector1.IN1
-salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+|PosicionesOcupadas
+clk => ocupadoAux.CLK
+clk => matriz[0].CLK
+clk => matriz[1].CLK
+clk => matriz[2].CLK
+clk => matriz[3].CLK
+clk => matriz[4].CLK
+clk => matriz[5].CLK
+clk => matriz[6].CLK
+clk => matriz[7].CLK
+rst => matriz[0].ACLR
+rst => matriz[1].ACLR
+rst => matriz[2].ACLR
+rst => matriz[3].ACLR
+rst => matriz[4].ACLR
+rst => matriz[5].ACLR
+rst => matriz[6].ACLR
+rst => matriz[7].ACLR
+rst => ocupadoAux.ENA
+posicion[0] => Mux0.IN2
+posicion[0] => Decoder0.IN2
+posicion[1] => Mux0.IN1
+posicion[1] => Decoder0.IN1
+posicion[2] => Mux0.IN0
+posicion[2] => Decoder0.IN0
+ocupado <= ocupadoAux.DB_MAX_OUTPUT_PORT_TYPE
 
 

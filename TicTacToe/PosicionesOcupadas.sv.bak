@@ -1,0 +1,8 @@
+module espaciosOcupados(input clk, rst, input [2:0] posicion, output ocupado);
+	reg[8:0] matriz = 
+	always_ff@(posedge clk, posedge rst)
+		if(rst)
+			matriz = 8'b00000000;
+	
+
+endmodule;
