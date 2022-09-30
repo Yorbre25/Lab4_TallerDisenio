@@ -1,0 +1,13 @@
+module GatoTop(input clk, rst, mover, colocar);
+	logic timeOut; //Si el timepo se acabó
+	logic colocarAux; //boton colocar luego de verificar que el espacio está vacío
+	logic jugador; // De que jugador es el turno (1: X, 0: O)
+	logic [3:0] posActual;
+	
+	Contador temporizador(rst, timeOut);
+	Mover movimiento(clk, rst, mover, posActual);
+	Turnos turno(clk, rst, colocarAux, timeOut, jugador);
+	Matriz matrizDeJuego(clk, rst, posActual, jugador);
+	
+
+endmodule 

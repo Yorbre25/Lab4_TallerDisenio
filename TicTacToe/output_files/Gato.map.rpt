@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Thu Sep 29 19:20:56 2022
+Fri Sep 30 16:00:03 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TestTurnos|Turnos:turnos|estadoActual
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Port Connectivity Checks: "Turnos:turnos"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |GatoTop|Turnos:turno|estadoActual
+  9. State Machine - |GatoTop|Mover:movimiento|estadoActual
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Port Connectivity Checks: "Matriz:instMatriz"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,14 +48,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 29 19:20:56 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 30 16:00:03 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
-; Top-level Entity Name           ; TestTurnos                                  ;
+; Top-level Entity Name           ; GatoTop                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 1                                           ;
+; Total pins                      ; 5                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -72,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; TestTurnos         ; Gato               ;
+; Top-level entity name                                                           ; GatoTop            ; Gato               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -169,41 +171,44 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; Turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv     ;         ;
-; TestTurnos.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; Contador.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv ;         ;
+; Mover.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv    ;         ;
+; Turnos.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv   ;         ;
+; Matriz.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv   ;         ;
+; GatoTop.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 0            ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 0            ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 0            ;
-;     -- 5 input functions                    ; 0            ;
-;     -- 4 input functions                    ; 0            ;
-;     -- <=3 input functions                  ; 0            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 1            ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; equis~output ;
-; Maximum fan-out                             ; 1            ;
-; Total fan-out                               ; 1            ;
-; Average fan-out                             ; 0.50         ;
-+---------------------------------------------+--------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimate of Logic utilization (ALMs needed) ; 0       ;
+;                                             ;         ;
+; Combinational ALUT usage for logic          ; 0       ;
+;     -- 7 input functions                    ; 0       ;
+;     -- 6 input functions                    ; 0       ;
+;     -- 5 input functions                    ; 0       ;
+;     -- 4 input functions                    ; 0       ;
+;     -- <=3 input functions                  ; 0       ;
+;                                             ;         ;
+; Dedicated logic registers                   ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 5       ;
+;                                             ;         ;
+; Total DSP Blocks                            ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; colocar ;
+; Maximum fan-out                             ; 1       ;
+; Total fan-out                               ; 5       ;
+; Average fan-out                             ; 0.50    ;
++---------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,30 +216,77 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |TestTurnos                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 1    ; 0            ; |TestTurnos         ; TestTurnos  ; work         ;
+; |GatoTop                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 5    ; 0            ; |GatoTop            ; GatoTop     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------+
-; State Machine - |TestTurnos|Turnos:turnos|estadoActual ;
-+----------------+---------------------------------------+
-; Name           ; estadoActual.1                        ;
-+----------------+---------------------------------------+
-; estadoActual.0 ; 0                                     ;
-; estadoActual.1 ; 1                                     ;
-+----------------+---------------------------------------+
++----------------------------------------------------+
+; State Machine - |GatoTop|Turnos:turno|estadoActual ;
++----------------+-----------------------------------+
+; Name           ; estadoActual.1                    ;
++----------------+-----------------------------------+
+; estadoActual.0 ; 0                                 ;
+; estadoActual.1 ; 1                                 ;
++----------------+-----------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                           ;
-+---------------------------------------+--------------------------------------+
-; Register name                         ; Reason for Removal                   ;
-+---------------------------------------+--------------------------------------+
-; Turnos:turnos|estadoActual.1          ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 1 ;                                      ;
-+---------------------------------------+--------------------------------------+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GatoTop|Mover:movimiento|estadoActual                                                                                                                                                ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; estadoActual.0111 ; estadoActual.0110 ; estadoActual.0101 ; estadoActual.0100 ; estadoActual.0011 ; estadoActual.0010 ; estadoActual.0001 ; estadoActual.0000 ; estadoActual.1000 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; estadoActual.0000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; estadoActual.0001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ; 0                 ;
+; estadoActual.0010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0011 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0100 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0101 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0110 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.0111 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; estadoActual.1000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; Mover:movimiento|estadoActual~4        ; Lost fanout        ;
+; Mover:movimiento|estadoActual~5        ; Lost fanout        ;
+; Mover:movimiento|estadoActual~6        ; Lost fanout        ;
+; Contador:temporizador|sAux             ; Lost fanout        ;
+; Contador:temporizador|cont[0..4]       ; Lost fanout        ;
+; Turnos:turno|estadoActual.1            ; Lost fanout        ;
+; Mover:movimiento|estadoActual.1000     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0000     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0001     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0010     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0011     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0100     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0101     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0110     ; Lost fanout        ;
+; Mover:movimiento|estadoActual.0111     ; Lost fanout        ;
+; Total Number of Removed Registers = 19 ;                    ;
++----------------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                    ;
++---------------------------------+--------------------+-------------------------------------------------------------------------+
+; Register name                   ; Reason for Removal ; Registers Removed due to This Register                                  ;
++---------------------------------+--------------------+-------------------------------------------------------------------------+
+; Mover:movimiento|estadoActual~4 ; Lost Fanouts       ; Mover:movimiento|estadoActual.0000, Mover:movimiento|estadoActual.0001, ;
+;                                 ;                    ; Mover:movimiento|estadoActual.0010, Mover:movimiento|estadoActual.0011, ;
+;                                 ;                    ; Mover:movimiento|estadoActual.0100, Mover:movimiento|estadoActual.0101, ;
+;                                 ;                    ; Mover:movimiento|estadoActual.0110, Mover:movimiento|estadoActual.0111  ;
+; Contador:temporizador|sAux      ; Lost Fanouts       ; Contador:temporizador|cont[0], Contador:temporizador|cont[1],           ;
+;                                 ;                    ; Contador:temporizador|cont[2], Contador:temporizador|cont[3],           ;
+;                                 ;                    ; Contador:temporizador|cont[4]                                           ;
++---------------------------------+--------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -253,11 +305,11 @@ Encoding Type:  One-Hot
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Turnos:turnos"                                                                        ;
+; Port Connectivity Checks: "Matriz:instMatriz"                                                                    ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
-; salida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; matriz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -269,7 +321,7 @@ Encoding Type:  One-Hot
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 1                           ;
+; boundary_port         ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -291,14 +343,12 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 29 19:20:26 2022
+    Info: Processing started: Fri Sep 30 15:59:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
     Info (12023): Found entity 1: Contador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file test.sv
-    Info (12023): Found entity 1: Test File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
     Info (12023): Found entity 1: Ganador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file mover.sv
@@ -307,27 +357,40 @@ Info (12021): Found 1 design units, including 1 entities, in source file ganador
     Info (12023): Found entity 1: GanadorBlock File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GanadorBlock.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
     Info (12023): Found entity 1: Turnos File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file gato.sv
-    Info (12023): Found entity 1: gato File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/gato.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file testturnos.sv
-    Info (12023): Found entity 1: TestTurnos File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 1
-Info (12127): Elaborating entity "TestTurnos" for the top level hierarchy
-Warning (10755): Verilog HDL warning at TestTurnos.sv(18): assignments to clk create a combinational loop File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 18
-Warning (10034): Output port "equis" at TestTurnos.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 1
-Info (12128): Elaborating entity "Turnos" for hierarchy "Turnos:turnos" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 4
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testmover.sv
+    Info (12023): Found entity 1: TestMover File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMover.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file matriz.sv
+    Info (12023): Found entity 1: Matriz File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file testmatriz.sv
+    Info (12023): Found entity 1: TestMatriz File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gatotop.sv
+    Info (12023): Found entity 1: GatoTop File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+Info (12127): Elaborating entity "GatoTop" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at GatoTop.sv(5): object "winAux" assigned a value but never read File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 5
+Warning (10034): Output port "win" at GatoTop.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+Info (12128): Elaborating entity "Contador" for hierarchy "Contador:temporizador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 9
+Warning (10755): Verilog HDL warning at Contador.sv(8): assignments to clk create a combinational loop File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at Contador.sv(17): truncated value with size 32 to match size of target (5) File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 17
+Info (12128): Elaborating entity "Mover" for hierarchy "Mover:movimiento" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 10
+Info (12128): Elaborating entity "Turnos" for hierarchy "Turnos:turno" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 11
+Info (12128): Elaborating entity "Matriz" for hierarchy "Matriz:instMatriz" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "equis" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 1
+    Warning (13410): Pin "win" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 0 input pins
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "colocar" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+    Warning (15610): No output dependent on input pin "mover" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Thu Sep 29 19:20:56 2022
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:01:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Fri Sep 30 16:00:03 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:36
 
 

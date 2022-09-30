@@ -1,0 +1,28 @@
+//Matriz de juego
+//Entrada:
+//		jugador:
+//			1: X
+//			0: O
+//		pos: Posición en el tablero
+// 00: Espacio vacío
+// 01: Espacio con X
+// 10: Espacio con O
+module matrizDeJuego(input clk, input rst, input[3:0] pos, input jugador);
+	reg [8:0][1:0] matriz;
+	logic [1:0] elemento;
+	
+	always_ff @(posedge clk or posedge rst)
+		if(rst)
+			matriz[8:0] = 2'b00;
+		else
+			matriz[pos] = elemento;
+		
+		
+	always_comb
+		begin
+		case(jugador)
+		0: elemento = 2b'10;
+		1: elemento = 2b'01;
+		
+		matriz[pos] = elemento;
+endmodule 

@@ -1,12 +1,116 @@
-|TestTurnos
-equis <= <GND>
+|GatoTop
+clk => clk.IN2
+rst => rst.IN3
+mover => mover.IN1
+colocar => ~NO_FANOUT~
+win <= <GND>
 
 
-|TestTurnos|Turnos:turnos
+|GatoTop|Contador:temporizador
+reset => cont[0].ACLR
+reset => cont[1].PRESET
+reset => cont[2].PRESET
+reset => cont[3].PRESET
+reset => cont[4].PRESET
+reset => sAux.ENA
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Mover:movimiento
+clk => estadoActual~1.DATAIN
+rst => estadoActual~3.DATAIN
+entrada => Selector1.IN3
+entrada => Selector2.IN3
+entrada => Selector3.IN3
+entrada => Selector4.IN3
+entrada => Selector5.IN3
+entrada => Selector6.IN3
+entrada => Selector7.IN3
+entrada => Selector8.IN3
+entrada => Selector0.IN3
+entrada => Selector0.IN1
+entrada => Selector1.IN1
+entrada => Selector2.IN1
+entrada => Selector3.IN1
+entrada => Selector4.IN1
+entrada => Selector5.IN1
+entrada => Selector6.IN1
+entrada => Selector7.IN1
+entrada => Selector8.IN1
+salida[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Turnos:turno
 clk => estadoActual~1.DATAIN
 rst => estadoActual~3.DATAIN
 jugado => always1.IN0
 tiempo => always1.IN1
 salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Matriz:instMatriz
+clk => ~NO_FANOUT~
+rst => matriz[0][0]~reg0.ACLR
+rst => matriz[0][1]~reg0.ACLR
+rst => matriz[1][0]~reg0.ACLR
+rst => matriz[1][1]~reg0.ACLR
+rst => matriz[2][0]~reg0.ACLR
+rst => matriz[2][1]~reg0.ACLR
+rst => matriz[3][0]~reg0.ACLR
+rst => matriz[3][1]~reg0.ACLR
+rst => matriz[4][0]~reg0.ACLR
+rst => matriz[4][1]~reg0.ACLR
+rst => matriz[5][0]~reg0.ACLR
+rst => matriz[5][1]~reg0.ACLR
+rst => matriz[6][0]~reg0.ACLR
+rst => matriz[6][1]~reg0.ACLR
+rst => matriz[7][0]~reg0.ACLR
+rst => matriz[7][1]~reg0.ACLR
+rst => matriz[8][0]~reg0.ACLR
+rst => matriz[8][1]~reg0.ACLR
+pos[0] => Decoder0.IN3
+pos[1] => Decoder0.IN2
+pos[2] => Decoder0.IN1
+pos[3] => Decoder0.IN0
+jugador => Decoder1.IN0
+jugador => matriz[0][0]~reg0.CLK
+jugador => matriz[0][1]~reg0.CLK
+jugador => matriz[1][0]~reg0.CLK
+jugador => matriz[1][1]~reg0.CLK
+jugador => matriz[2][0]~reg0.CLK
+jugador => matriz[2][1]~reg0.CLK
+jugador => matriz[3][0]~reg0.CLK
+jugador => matriz[3][1]~reg0.CLK
+jugador => matriz[4][0]~reg0.CLK
+jugador => matriz[4][1]~reg0.CLK
+jugador => matriz[5][0]~reg0.CLK
+jugador => matriz[5][1]~reg0.CLK
+jugador => matriz[6][0]~reg0.CLK
+jugador => matriz[6][1]~reg0.CLK
+jugador => matriz[7][0]~reg0.CLK
+jugador => matriz[7][1]~reg0.CLK
+jugador => matriz[8][0]~reg0.CLK
+jugador => matriz[8][1]~reg0.CLK
+matriz[0][0] <= matriz[0][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[0][1] <= matriz[0][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[1][0] <= matriz[1][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[1][1] <= matriz[1][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[2][0] <= matriz[2][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[2][1] <= matriz[2][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[3][0] <= matriz[3][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[3][1] <= matriz[3][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[4][0] <= matriz[4][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[4][1] <= matriz[4][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[5][0] <= matriz[5][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[5][1] <= matriz[5][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[6][0] <= matriz[6][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[6][1] <= matriz[6][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[7][0] <= matriz[7][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[7][1] <= matriz[7][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[8][0] <= matriz[8][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+matriz[8][1] <= matriz[8][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

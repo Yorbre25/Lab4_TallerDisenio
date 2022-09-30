@@ -1,0 +1,20 @@
+module TestMover();
+	logic clk, rst, mov;
+	logic [3:0] salida;
+	
+	Mover mover (clk, rst, mov, tiempo, salida);
+
+	initial
+		begin
+		clk = 0;
+		mov = 0;
+		rst = 1;
+		#5;
+		rst = 0;
+		end
+	
+	always_comb
+		begin
+		clk = ~clk; #5;
+		end
+endmodule;
