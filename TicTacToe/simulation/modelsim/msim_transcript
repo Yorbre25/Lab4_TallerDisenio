@@ -1,60 +1,92 @@
-# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do Gato_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:22:33 on Sep 20,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe" C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv 
-# -- Compiling module Contador
+# vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:56 on Sep 29,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe" C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv 
+# -- Compiling module Turnos
 # 
 # Top level modules:
-# 	Contador
-# End time: 11:22:33 on Sep 20,2022, Elapsed time: 0:00:00
+# 	Turnos
+# End time: 17:28:57 on Sep 29,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:22:33 on Sep 20,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe" C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv 
+# vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:57 on Sep 29,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe" C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv 
 # -- Compiling module Test
 # 
 # Top level modules:
 # 	Test
-# End time: 11:22:33 on Sep 20,2022, Elapsed time: 0:00:00
+# End time: 17:28:57 on Sep 29,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  test
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" test 
-# Start time: 11:22:33 on Sep 20,2022
+# Start time: 17:28:57 on Sep 29,2022
 # ** Error: (vsim-3170) Could not find 'test'.
 #         Searched libraries:
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/220model
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/sgate
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_mf
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_lnsim
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev_hssi
-#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
-#             C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
-#             C:/Users/User/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
+#             C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
 # Error loading design
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./Gato_run_msim_rtl_verilog.do PAUSED at line 12
-vsim work.Contador
-# vsim work.Contador 
-# Start time: 11:22:33 on Sep 20,2022
+vsim work.Test
+# vsim work.Test 
+# Start time: 17:28:57 on Sep 29,2022
 # Loading sv_std.std
-# Loading work.Contador
-# End time: 11:34:17 on Sep 20,2022, Elapsed time: 0:11:44
-# Errors: 1, Warnings: 0
+# Loading work.Test
+# ** Error: (vsim-3033) Instantiation of 'Contador' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Test File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv Line: 4
+#         Searched libraries:
+#             C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Gato_run_msim_rtl_verilog.do PAUSED at line 12
+vsim work.Test
+# vsim work.Test 
+# Start time: 17:28:57 on Sep 29,2022
+# Loading sv_std.std
+# Loading work.Test
+# ** Error: (vsim-3033) Instantiation of 'Contador' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Test File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Test.sv Line: 4
+#         Searched libraries:
+#             C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Gato_run_msim_rtl_verilog.do PAUSED at line 12
+vsim work.Turnos
+# vsim work.Turnos 
+# Start time: 17:28:57 on Sep 29,2022
+# Loading sv_std.std
+# Loading work.Turnos
+add wave -position end  sim:/Turnos/clk
+add wave -position end  sim:/Turnos/rst
+add wave -position end  sim:/Turnos/jugado
+add wave -position end  sim:/Turnos/tiempo
+add wave -position end  sim:/Turnos/salida
+run
+# End time: 17:29:41 on Sep 29,2022, Elapsed time: 0:00:44
+# Errors: 3, Warnings: 0

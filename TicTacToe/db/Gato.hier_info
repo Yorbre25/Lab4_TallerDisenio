@@ -1,28 +1,11 @@
-|PosicionesOcupadas
-clk => ocupadoAux.CLK
-clk => matriz[0].CLK
-clk => matriz[1].CLK
-clk => matriz[2].CLK
-clk => matriz[3].CLK
-clk => matriz[4].CLK
-clk => matriz[5].CLK
-clk => matriz[6].CLK
-clk => matriz[7].CLK
-rst => matriz[0].ACLR
-rst => matriz[1].ACLR
-rst => matriz[2].ACLR
-rst => matriz[3].ACLR
-rst => matriz[4].ACLR
-rst => matriz[5].ACLR
-rst => matriz[6].ACLR
-rst => matriz[7].ACLR
-rst => ocupadoAux.ENA
-posicion[0] => Mux0.IN2
-posicion[0] => Decoder0.IN2
-posicion[1] => Mux0.IN1
-posicion[1] => Decoder0.IN1
-posicion[2] => Mux0.IN0
-posicion[2] => Decoder0.IN0
-ocupado <= ocupadoAux.DB_MAX_OUTPUT_PORT_TYPE
+|TestTurnos
+
+
+|TestTurnos|Turnos:turnos
+clk => estadoActual~1.DATAIN
+rst => estadoActual~3.DATAIN
+jugado => always1.IN0
+tiempo => always1.IN1
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -4,11 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ocupado",
+					"name" : "salida",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "jugado",
+					"strict" : false
+				},
+				{
+					"name" : "tiempo",
 					"strict" : false
 				},
 				{
@@ -16,15 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "posicion[2]",
-					"strict" : false
-				},
-				{
-					"name" : "posicion[1]",
-					"strict" : false
-				},
-				{
-					"name" : "posicion[0]",
+					"name" : "rst",
 					"strict" : false
 				}
 			]
