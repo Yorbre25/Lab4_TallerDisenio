@@ -2,28 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "salida",
-					"strict" : false
-				},
-				{
-					"name" : "jugado",
-					"strict" : false
-				},
-				{
-					"name" : "tiempo",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

@@ -1,4 +1,4 @@
-module TestTurnos();
+module TestTurnos(output equis);
 	logic clk, rst, jugador, tiempo, salida;
 	
 	Turnos turnos (clk, rst, jugador, tiempo, salida);
@@ -16,11 +16,6 @@ module TestTurnos();
 	always_comb
 		begin
 		clk = ~clk; #5;
-		end
-	
-	always
-		begin
-		jugador = 1; #15;
 		end
 	
 endmodule 
