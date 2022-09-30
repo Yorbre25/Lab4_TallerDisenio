@@ -2,7 +2,92 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "matrizDeJuego[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[2][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[2][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[3][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[3][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[4][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[4][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[5][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[5][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[6][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[6][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[7][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[7][1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[8][0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrizDeJuego[8][1]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "mover",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

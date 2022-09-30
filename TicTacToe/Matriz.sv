@@ -15,7 +15,7 @@ module Matriz(input clk, input rst, input[3:0] pos, input jugador, output [8:0][
 		if(rst)
 			matriz[8:0] = 0; //00
 		else
-			matriz[pos] = elemento;
+			if (matriz[pos] == 0) matriz[pos] = elemento;
 		
 		
 	always_comb

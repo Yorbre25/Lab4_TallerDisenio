@@ -1,10 +1,10 @@
-module GatoTop(input clk, rst, mover, colocar, output win);
+module GatoTop(input clk, rst, mover, colocar, output[8:0][1:0] matrizDeJuego, output win);
 	logic timeOut; //Si el timepo se acabó
 	logic colocarAux; //boton colocar luego de verificar que el espacio está vacío
 	logic jugador; // De que jugador es el turno (1: X, 0: O)
-	logic winAux;
+	logic winAux; // Si se ganó
 	logic [3:0] posActual;
-	logic [8:0][1:0] matrizDeJuego;
+//	logic [8:0][1:0] matrizDeJuego;
 	
 	Contador temporizador(rst, timeOut);
 	Mover movimiento(clk, rst, mover, posActual);
