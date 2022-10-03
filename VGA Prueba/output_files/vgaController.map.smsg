@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at contadorXY.sv(6): always construct contains both blocking and non-blocking assignments File: D:/Proyectos/Taller/VGA Prueba/contadorXY.sv Line: 6
+Warning (10268): Verilog HDL information at botonMove.sv(19): always construct contains both blocking and non-blocking assignments File: D:/Proyectos/Taller/VGA Prueba/botonMove.sv Line: 19
+Warning (10268): Verilog HDL information at regfile1x24b.sv(49): always construct contains both blocking and non-blocking assignments File: D:/Proyectos/Taller/VGA Prueba/regfile1x24b.sv Line: 49

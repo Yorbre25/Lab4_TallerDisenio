@@ -1,0 +1,14 @@
+module ROM_Circle(input [2:0] rom_addr, output [7:0] rom_data);
+	always @*
+		case (rom_addr)
+			3'h0: rom_data = 8'b00111100;
+			3'h1: rom_data = 8'b01111110;
+			3'h2: rom_data = 8'b11111111;
+			3'h3: rom_data = 8'b11111111;
+			3'h4: rom_data = 8'b11111111;
+			3'h5: rom_data = 8'b11111111;
+			3'h6: rom_data = 8'b01111110;
+			3'h7: rom_data = 8'b00111100;
+		endcase
+
+endmodule 
