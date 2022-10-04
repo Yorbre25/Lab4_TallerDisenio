@@ -7,16 +7,16 @@
 // 00: Espacio vacío
 // 01: Espacio con X
 // 10: Espacio con O
-module Matriz(input clk, input rst, input[3:0] pos, input jugador, output [8:0][1:0] matriz);
+module Matriz(input clk, input rst, input[3:0] pos, input jugador, input boton, output [8:0][1:0] matriz);
 //	reg [8:0][1:0] matriz;
+	logic [8:0][1:0] matrizAux;
 	logic [1:0] elemento;
 	
-	always_ff @(posedge jugador or posedge rst)
+	always_ff @(posedge boton or posedge rst)
 		if(rst)
-			matriz[8:0] = 0; //00
+			matrizAux[8:0] = 0; //00
 		else
-			if (matriz[pos] == 0) matriz[pos] = elemento;
-		
+			if (matrizAux[pos] == 0) matrizAux[pos] = elemento;
 		
 	always_comb
 		begin
@@ -26,4 +26,6 @@ module Matriz(input clk, input rst, input[3:0] pos, input jugador, output [8:0][
 			default: elemento = 3; //11
 		endcase
 		end
+		
+	assign matriz = matrizAux;
 endmodule 

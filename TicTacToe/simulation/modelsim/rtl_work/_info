@@ -1,10 +1,65 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
+Z0 dC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
+vMatriz
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1664904865
+!i10b 1
+!s100 NVzZ@oFNTFNP=Wb6`CM1o1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ICMWbOCjfnnEV6gFoViKVG1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1664904496
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
+!i122 0
+L0 10 22
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1664904865.000000
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe
+Z9 tCvgOpt 0
+n@matriz
+vTestMatriz
+R1
+R2
+!i10b 1
+!s100 N@YaPe><MaLX18aHW=25@2
+R3
+I7]T]3obj2=2g6S8BUDj1Q2
+R4
+S1
+R0
+w1664904809
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv
+!i122 1
+L0 1 42
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv|
+!i113 1
+R7
+R8
+R9
+n@test@matriz
