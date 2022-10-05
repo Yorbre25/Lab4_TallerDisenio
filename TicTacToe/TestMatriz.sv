@@ -15,23 +15,40 @@ module TestMatriz();
 		clk = 0;
 	end
 	
-	always begin
-		boton = 0; 
+//	always begin
+//		boton = 0; 
+//		jugador = 0;
+//		#5;
+//		pos = 3;
+//		boton = 1;
+//		#5;
+//		boton= 0;
+//		jugador = 1;
+//		#5;
+//		pos = 5;
+//		boton = 1;
+//		#5;
+//		boton = 0;
+//		#5;
+//		rst=1;
+//	end
+	
+	always begin //TestReset
 		jugador = 0;
 		#5;
 		pos = 3;
 		boton = 1;
 		#5;
-		boton= 0;
-		jugador = 1;
+		boton = 0;
+		#5;
+		rst = 1;
 		#5;
 		pos = 5;
 		boton = 1;
 		#5;
 		boton = 0;
-		#5;
-		rst=1;
-	end
+		
+		end
 
 	always begin
 		clk = ~clk; #5;

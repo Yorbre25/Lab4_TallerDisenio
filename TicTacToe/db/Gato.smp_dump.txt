@@ -1,4 +1,9 @@
 
+State Machine - |GatoTop|Ganador:comb_3|estadoActual
+Name estadoActual.1 
+estadoActual.0 0 
+estadoActual.1 1 
+
 State Machine - |GatoTop|Turnos:turno|estadoActual
 Name estadoActual.1 
 estadoActual.0 0 

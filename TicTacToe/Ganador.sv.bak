@@ -1,27 +1,25 @@
-// Entrada:
-//		1: Casilla ocupada
-//		0: Casilla vacía
-// Salida:
-//		1: La fila está llena
-module Ganador (input clk, rst, entrada, output salida);
-	logic [1:0]estadoActual, estadoSiguiente;
+module Ganador(input clk, rst, input[8:0][1:0], win);
+	logic estadoAcutal, estadoSiguiente;
 	
-	//Logica estado acutal (secuencial)
-	always_ff @(posedge clk or posedge rst)
+	always_ff@(posedge clk, posedge rst)
 		if(rst)
 			estadoActual = 0;
 		else
 			estadoActual = estadoSiguiente;
-			
-	//Logica estado siguiente (combinacional)
-	
-	always_comb
-		case(estadoActual)
-			0: if (entrada) estadoSiguiente = 1; else estadoSiguiente = 0;
-			1: if (entrada) estadoSiguiente = 2; else estadoSiguiente = 2;
-			default: estadoSiguiente = 0;
-		endcase
 		
-	//Logica de las salidas
-	assign salida = (estadoActual==2);
-endmodule 
+	always_comb begin
+	if( (matrizDeJuego[0] == matrizDeJuego[1] == matrizDeJuego[2]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-1-2
+		else if( (matrizDeJuego[3] == matrizDeJuego[4] == matrizDeJuego[5]) & matrizDeJuego[3] != 0) estadoSiguiente = 1; //3-4-5
+		else if( (matrizDeJuego[6] == matrizDeJuego[7] == matrizDeJuego[8]) & matrizDeJuego[6] != 0) estadoSiguiente = 1;	//6-7-8
+		else if( (matrizDeJuego[0] == matrizDeJuego[3] == matrizDeJuego[6]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-3-6
+		else if( (matrizDeJuego[1] == matrizDeJuego[4] == matrizDeJuego[7]) & matrizDeJuego[1] != 0) estadoSiguiente = 1; //1-4-7
+		else if( (matrizDeJuego[2] == matrizDeJuego[5] == matrizDeJuego[8]) & matrizDeJuego[2] != 0) estadoSiguiente = 1; //2-5-8
+		else if( (matrizDeJuego[0] == matrizDeJuego[4] == matrizDeJuego[8]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-4-8
+		else if( (matrizDeJuego[2] == matrizDeJuego[4] == matrizDeJuego[6]) & matrizDeJuego[2] != 0) estadoSiguiente = 1; //2-4-6
+	else
+		estadoSiguiente = 0;
+	end
+	
+	assign win = estadoActual;
+	
+endmodule;
