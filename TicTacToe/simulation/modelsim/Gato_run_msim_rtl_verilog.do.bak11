@@ -5,7 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv}
+vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv}
+vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv}
 vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv}
+vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv}
 
 vlog -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe {C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv}
 

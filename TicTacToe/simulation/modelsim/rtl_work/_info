@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
 vContador
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1664925566
+!s110 1664999435
 !i10b 1
 !s100 zG`[I7Vm6Pnk`@8:Q7<2R1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1664925566.000000
+!s108 1664999435.000000
 !s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
 !i113 1
@@ -38,7 +38,7 @@ Z8 tCvgOpt 0
 n@contador
 vGatoTop
 R1
-Z9 !s110 1664925568
+Z9 !s110 1664999437
 !i10b 1
 !s100 5T3HQ>_nE<^LeIoS5B4=a0
 R2
@@ -55,7 +55,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1664925568.000000
+Z10 !s108 1664999437.000000
 !s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv|
 !i113 1
@@ -92,7 +92,7 @@ R8
 n@matriz
 vMover
 R1
-!s110 1664925567
+R9
 !i10b 1
 !s100 5J<MBVGRS`ePAOG=:LEeT1
 R2
@@ -109,7 +109,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1664925567.000000
+!s108 1664999436.000000
 !s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv|
 !i113 1
@@ -119,24 +119,24 @@ R8
 n@mover
 vTestTurnos
 R1
-R9
+!s110 1664999438
 !i10b 1
-!s100 [498<SWM:392:B_GnIUQ<2
+!s100 [ZEj;m2jdPUOdVmYmB[9?1
 R2
-Ij@l?>T>mgkigcVe@9g79?2
+Ilho9dSfLCZm@GkW;cHbVm0
 R3
 S1
 R0
-w1664925471
+w1664999376
 8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv
 FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv
 !i122 5
-L0 1 25
+L0 1 39
 R5
 r1
 !s85 0
 31
-R10
+!s108 1664999438.000000
 !s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv|
 !i113 1
@@ -163,7 +163,7 @@ R5
 r1
 !s85 0
 31
-R11
+R10
 !s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv|
 !i113 1
