@@ -1,7 +1,7 @@
 module videoGenerador(input logic boton,boton2,boton3,//boton4,
 							 input logic clk, // clock de 60 Hz pues se instancia con el clock de V_SYNC...
 							 input logic [9:0]cuentaX,cuentaY,
-							 output logic jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,output_gano,
+							 output logic jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,//output_gano,
 							 //output logic [1:0] gano,
 							 output logic [7:0] r,g,b);
 							 
@@ -14,7 +14,7 @@ module videoGenerador(input logic boton,boton2,boton3,//boton4,
 		
 		
 		
-		controlTOP control (boton,boton2,boton3,clk,cuentaX,cuentaY,jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,output_gano,r,g,b);
+		controlTOP control (boton,boton2,boton3,clk,cuentaX,cuentaY,jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,r,g,b);
 		
 		
 		

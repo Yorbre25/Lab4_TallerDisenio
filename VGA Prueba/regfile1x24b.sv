@@ -64,7 +64,7 @@ module regfile1x24b
 			jugador1 = 1'b0;
 			jugador2 = 1'b0;
 		
-		end else if (regfile[0] == 2'b01)begin
+		end else if (regfile[0] == 2'b00)begin
 			jugador1 = 1'b1;
 			jugador2 = 2'b0;
 		end else begin

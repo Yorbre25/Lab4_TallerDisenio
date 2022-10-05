@@ -24,42 +24,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "jugador10",
-					"strict" : false
-				},
-				{
-					"name" : "jugador11",
-					"strict" : false
-				},
-				{
-					"name" : "jugador12",
-					"strict" : false
-				},
-				{
-					"name" : "jugador13",
-					"strict" : false
-				},
-				{
-					"name" : "jugador14",
-					"strict" : false
-				},
-				{
-					"name" : "jugador15",
-					"strict" : false
-				},
-				{
-					"name" : "jugador16",
-					"strict" : false
-				},
-				{
-					"name" : "jugador17",
-					"strict" : false
-				},
-				{
-					"name" : "jugador18",
-					"strict" : false
-				},
-				{
 					"name" : "r[0]",
 					"strict" : false
 				},
@@ -160,15 +124,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "boton2",
-					"strict" : false
-				},
-				{
 					"name" : "boton3",
 					"strict" : false
 				},
 				{
-					"name" : "boton",
+					"name" : "boton2",
 					"strict" : false
 				}
 			]

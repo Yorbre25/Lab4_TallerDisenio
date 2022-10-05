@@ -1,6 +1,6 @@
 module controlTOP (input logic boton_Cuenta_Casilla, boton_Seleccionador,boton_rst,clk,
 						input logic [9:0] cuentaX,cuentaY,
-						output logic jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,output_gano,
+						output logic jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18,//output_gano,
 						//output logic [1:0]gano,
 						 output logic [7:0] r,g,b);
 			
@@ -17,22 +17,13 @@ module controlTOP (input logic boton_Cuenta_Casilla, boton_Seleccionador,boton_r
 			
 			
 			logic posX0,posY0, posX1,posY1, posX2,posY2, posX3,posY3, posX4,posY4, posX5,posY5, posX6,posY6, posX7,posY7, posX8,posY8;
-			
-			//logic jugador10,jugador20,jugador11,jugador21,jugador12,jugador22,jugador13,jugador23,jugador14,jugador24,jugador15,jugador25,jugador16,jugador26,jugador17,jugador27,jugador18,jugador28;
-			
-			 contadorPushButton boton1(clk, boton_rst, boton_Cuenta_Casilla, contador);
+
+			 Turnos turno(clk, boton_rst, boton_Seleccionador, contador_seleccionador);
+			 Mover move(clk, boton_rst, boton_Cuenta_Casilla, contador);
 			 
-			 contadorPushButtonSeleccionador botonSel (clk, boton_rst, boton_Seleccionador,contador_seleccionador);
+			 pos_edge_det2 write(boton_Seleccionador, clk, level_out);
 			 
-			 //contadorWrite contWrite (clk, boton_rst,boton_Seleccionador,contador_Write,level_out);
-			 
-			 pos_edge_det2 write (boton_Seleccionador, clk, level_out);
-			 
-			 rectgen seleccionador (clk,boton_Cuenta_Casilla,boton3,contador,cuentaX,cuentaY,0,130,180,140,visible_rectangulo);
-			 
-			 
-			 
-			 
+			 rectgen seleccionador (clk, boton_rst,contador,cuentaX,cuentaY,0,130,180,140,visible_rectangulo);
 			 
 			 deco decodificador (contador, level_out, cero,uno,dos,tres,cuatro,cinco, seis,siete,ocho);
 			 
@@ -121,9 +112,9 @@ module controlTOP (input logic boton_Cuenta_Casilla, boton_Seleccionador,boton_r
 			//------------------------------Instancia de la lógica del juego--------------------//
 			
 			
-			Maquina_Estado logica_Juego (clk,boton_rst, level_out, {jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18}, {jugador20,jugador21,jugador22,jugador23,jugador24,jugador25,jugador26,jugador27,jugador28}, gano);
+			//Maquina_Estado logica_Juego (clk,boton_rst, level_out, {jugador10,jugador11,jugador12,jugador13,jugador14,jugador15,jugador16,jugador17,jugador18}, {jugador20,jugador21,jugador22,jugador23,jugador24,jugador25,jugador26,jugador27,jugador28}, gano);
 																										
-			mux_gano gano_jugador (gano, output_gano);
+			//mux_gano gano_jugador (gano, output_gano);
 																											
 			 
 						 
