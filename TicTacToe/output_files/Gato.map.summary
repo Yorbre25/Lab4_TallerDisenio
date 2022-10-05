@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Oct 04 11:33:56 2022
+Analysis & Synthesis Status : Successful - Tue Oct 04 17:18:52 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Gato
-Top-level Entity Name : Matriz
+Top-level Entity Name : GatoTop
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 18
-Total pins : 26
+Total registers : 17
+Total pins : 23
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

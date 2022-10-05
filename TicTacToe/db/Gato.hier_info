@@ -1,5 +1,69 @@
-|Matriz
-clk => ~NO_FANOUT~
+|GatoTop
+clk => clk.IN2
+rst => rst.IN3
+mover => mover.IN1
+colocar => Matriz:instMatriz.boton
+matrizDeJuego[0][0] <= Matriz:instMatriz.matriz[0][0]
+matrizDeJuego[0][1] <= Matriz:instMatriz.matriz[0][1]
+matrizDeJuego[1][0] <= Matriz:instMatriz.matriz[1][0]
+matrizDeJuego[1][1] <= Matriz:instMatriz.matriz[1][1]
+matrizDeJuego[2][0] <= Matriz:instMatriz.matriz[2][0]
+matrizDeJuego[2][1] <= Matriz:instMatriz.matriz[2][1]
+matrizDeJuego[3][0] <= Matriz:instMatriz.matriz[3][0]
+matrizDeJuego[3][1] <= Matriz:instMatriz.matriz[3][1]
+matrizDeJuego[4][0] <= Matriz:instMatriz.matriz[4][0]
+matrizDeJuego[4][1] <= Matriz:instMatriz.matriz[4][1]
+matrizDeJuego[5][0] <= Matriz:instMatriz.matriz[5][0]
+matrizDeJuego[5][1] <= Matriz:instMatriz.matriz[5][1]
+matrizDeJuego[6][0] <= Matriz:instMatriz.matriz[6][0]
+matrizDeJuego[6][1] <= Matriz:instMatriz.matriz[6][1]
+matrizDeJuego[7][0] <= Matriz:instMatriz.matriz[7][0]
+matrizDeJuego[7][1] <= Matriz:instMatriz.matriz[7][1]
+matrizDeJuego[8][0] <= Matriz:instMatriz.matriz[8][0]
+matrizDeJuego[8][1] <= Matriz:instMatriz.matriz[8][1]
+win <= <GND>
+
+
+|GatoTop|Contador:temporizador
+reset => cont[0].ACLR
+reset => cont[1].PRESET
+reset => cont[2].PRESET
+reset => cont[3].PRESET
+reset => cont[4].PRESET
+reset => sAux.ENA
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Mover:movimiento
+clk => estadoActual~1.DATAIN
+rst => estadoActual~3.DATAIN
+entrada => Selector1.IN3
+entrada => Selector2.IN3
+entrada => Selector3.IN3
+entrada => Selector4.IN3
+entrada => Selector5.IN3
+entrada => Selector6.IN3
+entrada => Selector7.IN3
+entrada => Selector8.IN3
+entrada => Selector0.IN3
+entrada => Selector0.IN1
+entrada => Selector1.IN1
+entrada => Selector2.IN1
+entrada => Selector3.IN1
+entrada => Selector4.IN1
+entrada => Selector5.IN1
+entrada => Selector6.IN1
+entrada => Selector7.IN1
+entrada => Selector8.IN1
+salida[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Matriz:instMatriz
+clk => colocadoAux.CLK
+rst => colocadoAux.ACLR
 rst => matrizAux[0][0].ACLR
 rst => matrizAux[0][1].ACLR
 rst => matrizAux[1][0].ACLR
@@ -18,6 +82,7 @@ rst => matrizAux[7][0].ACLR
 rst => matrizAux[7][1].ACLR
 rst => matrizAux[8][0].ACLR
 rst => matrizAux[8][1].ACLR
+rst => colocadoAux.IN0
 pos[0] => Mux0.IN10
 pos[0] => Mux1.IN10
 pos[0] => Decoder0.IN3
@@ -31,41 +96,42 @@ pos[3] => Mux0.IN7
 pos[3] => Mux1.IN7
 pos[3] => Decoder0.IN0
 jugador => Decoder1.IN0
-boton => matrizAux[0][0].CLK
-boton => matrizAux[0][1].CLK
-boton => matrizAux[1][0].CLK
-boton => matrizAux[1][1].CLK
-boton => matrizAux[2][0].CLK
-boton => matrizAux[2][1].CLK
-boton => matrizAux[3][0].CLK
-boton => matrizAux[3][1].CLK
-boton => matrizAux[4][0].CLK
-boton => matrizAux[4][1].CLK
-boton => matrizAux[5][0].CLK
-boton => matrizAux[5][1].CLK
-boton => matrizAux[6][0].CLK
-boton => matrizAux[6][1].CLK
-boton => matrizAux[7][0].CLK
-boton => matrizAux[7][1].CLK
-boton => matrizAux[8][0].CLK
-boton => matrizAux[8][1].CLK
-matriz[0][0] << matrizAux[0][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[0][1] << matrizAux[0][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[1][0] << matrizAux[1][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[1][1] << matrizAux[1][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[2][0] << matrizAux[2][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[2][1] << matrizAux[2][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[3][0] << matrizAux[3][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[3][1] << matrizAux[3][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[4][0] << matrizAux[4][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[4][1] << matrizAux[4][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[5][0] << matrizAux[5][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[5][1] << matrizAux[5][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[6][0] << matrizAux[6][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[6][1] << matrizAux[6][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[7][0] << matrizAux[7][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[7][1] << matrizAux[7][1].DB_MAX_OUTPUT_PORT_TYPE
-matriz[8][0] << matrizAux[8][0].DB_MAX_OUTPUT_PORT_TYPE
-matriz[8][1] << matrizAux[8][1].DB_MAX_OUTPUT_PORT_TYPE
+boton => colocadoAux.IN1
+boton => matrizAux[0][1].IN1
+boton => matrizAux[1][1].IN1
+boton => matrizAux[2][1].IN1
+boton => matrizAux[3][1].IN1
+boton => matrizAux[4][1].IN1
+boton => matrizAux[5][1].IN1
+boton => matrizAux[6][1].IN1
+boton => matrizAux[7][1].IN1
+boton => matrizAux[8][1].IN1
+colocado <= colocadoAux.DB_MAX_OUTPUT_PORT_TYPE
+matriz[0][0] <= matrizAux[0][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[0][1] <= matrizAux[0][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[1][0] <= matrizAux[1][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[1][1] <= matrizAux[1][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[2][0] <= matrizAux[2][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[2][1] <= matrizAux[2][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[3][0] <= matrizAux[3][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[3][1] <= matrizAux[3][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[4][0] <= matrizAux[4][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[4][1] <= matrizAux[4][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[5][0] <= matrizAux[5][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[5][1] <= matrizAux[5][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[6][0] <= matrizAux[6][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[6][1] <= matrizAux[6][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[7][0] <= matrizAux[7][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[7][1] <= matrizAux[7][1].DB_MAX_OUTPUT_PORT_TYPE
+matriz[8][0] <= matrizAux[8][0].DB_MAX_OUTPUT_PORT_TYPE
+matriz[8][1] <= matrizAux[8][1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GatoTop|Turnos:turno
+clk => estadoActual~1.DATAIN
+rst => estadoActual~3.DATAIN
+jugado => always1.IN0
+tiempo => always1.IN1
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
 
 

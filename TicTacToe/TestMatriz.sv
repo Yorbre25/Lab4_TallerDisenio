@@ -3,8 +3,9 @@ module TestMatriz();
 	logic [3:0] pos;
 	logic [8:0][1:0] matriz;
 	logic boton;
+	logic colocado;
 	
-	Matriz matrizDeJuego(clk, rst, pos, jugador, boton, matriz);
+	Matriz matrizDeJuego(clk, rst, pos, jugador, boton, colocado, matriz);
 	
 	initial begin
 		rst = 1; #5;

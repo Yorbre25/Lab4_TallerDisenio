@@ -4,83 +4,79 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "matriz[0][0]",
+					"name" : "matrizDeJuego[0][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[0][1]",
+					"name" : "matrizDeJuego[0][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[1][0]",
+					"name" : "matrizDeJuego[1][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[1][1]",
+					"name" : "matrizDeJuego[1][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[2][0]",
+					"name" : "matrizDeJuego[2][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[2][1]",
+					"name" : "matrizDeJuego[2][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[3][0]",
+					"name" : "matrizDeJuego[3][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[3][1]",
+					"name" : "matrizDeJuego[3][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[4][0]",
+					"name" : "matrizDeJuego[4][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[4][1]",
+					"name" : "matrizDeJuego[4][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[5][0]",
+					"name" : "matrizDeJuego[5][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[5][1]",
+					"name" : "matrizDeJuego[5][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[6][0]",
+					"name" : "matrizDeJuego[6][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[6][1]",
+					"name" : "matrizDeJuego[6][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[7][0]",
+					"name" : "matrizDeJuego[7][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[7][1]",
+					"name" : "matrizDeJuego[7][1]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[8][0]",
+					"name" : "matrizDeJuego[8][0]",
 					"strict" : false
 				},
 				{
-					"name" : "matriz[8][1]",
+					"name" : "matrizDeJuego[8][1]",
 					"strict" : false
 				},
 				{
-					"name" : "jugador",
-					"strict" : false
-				},
-				{
-					"name" : "boton",
+					"name" : "colocar",
 					"strict" : false
 				},
 				{
@@ -88,19 +84,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pos[0]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "pos[3]",
-					"strict" : false
-				},
-				{
-					"name" : "pos[1]",
-					"strict" : false
-				},
-				{
-					"name" : "pos[2]",
+					"name" : "mover",
 					"strict" : false
 				}
 			]

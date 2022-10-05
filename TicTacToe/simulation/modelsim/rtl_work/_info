@@ -9,57 +9,165 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/simulation/modelsim
-vMatriz
+vContador
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1664904865
+!s110 1664925566
 !i10b 1
-!s100 NVzZ@oFNTFNP=Wb6`CM1o1
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ICMWbOCjfnnEV6gFoViKVG1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 zG`[I7Vm6Pnk`@8:Q7<2R1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@@0]zZTZ308loOk4R9Hoh0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1664904496
-8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
-FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
+w1664033317
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv
 !i122 0
-L0 10 22
+Z4 L0 1 28
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1664904865.000000
-!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
+!s108 1664925566.000000
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe
-Z9 tCvgOpt 0
-n@matriz
-vTestMatriz
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe
+Z8 tCvgOpt 0
+n@contador
+vGatoTop
 R1
-R2
+Z9 !s110 1664925568
 !i10b 1
-!s100 N@YaPe><MaLX18aHW=25@2
+!s100 5T3HQ>_nE<^LeIoS5B4=a0
+R2
+IiKieN0kE3g?hE@_b5UKAg0
 R3
-I7]T]3obj2=2g6S8BUDj1Q2
-R4
 S1
 R0
-w1664904809
-8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv
-FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv
-!i122 1
-L0 1 42
+w1664923501
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv
+!i122 4
+R4
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv|
+Z10 !s108 1664925568.000000
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv|
 !i113 1
+R6
 R7
 R8
+n@gato@top
+vMatriz
+R1
 R9
-n@test@matriz
+!i10b 1
+!s100 >o`iQEMAhiei2jP64]CJ;3
+R2
+Ima:h6SlTK9f?]M8iRV0BK0
+R3
+S1
+R0
+w1664923014
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv
+!i122 3
+L0 10 33
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv|
+!i113 1
+R6
+R7
+R8
+n@matriz
+vMover
+R1
+!s110 1664925567
+!i10b 1
+!s100 5J<MBVGRS`ePAOG=:LEeT1
+R2
+IXkjLz4P3Q:zY<JMZlP=WV2
+R3
+S1
+R0
+w1663435149
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv
+!i122 1
+L0 7 29
+R5
+r1
+!s85 0
+31
+Z11 !s108 1664925567.000000
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv|
+!i113 1
+R6
+R7
+R8
+n@mover
+vTestTurnos
+R1
+R9
+!i10b 1
+!s100 [498<SWM:392:B_GnIUQ<2
+R2
+Ij@l?>T>mgkigcVe@9g79?2
+R3
+S1
+R0
+w1664925471
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv
+!i122 5
+L0 1 25
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv|
+!i113 1
+R6
+R7
+R8
+n@test@turnos
+vTurnos
+R1
+R9
+!i10b 1
+!s100 >aHK4UdJh3IVK[kARC`h00
+R2
+IZ9cPfF1?UPf4?iLDj`_Ed1
+R3
+S1
+R0
+w1664491136
+8C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv
+FC:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv
+!i122 2
+L0 1 18
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe|C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv|
+!i113 1
+R6
+R7
+R8
+n@turnos

@@ -1,0 +1,6 @@
+module TestGato();
+	logic clk, rst, mover, colocar win;
+	logic [8:0][1:0] matrizDeJuego
+	
+	GatoTop juego(clk, rst, mover, colocar, matrizDeJuego, win);
+endmodule 

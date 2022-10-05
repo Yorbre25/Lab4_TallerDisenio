@@ -1,5 +1,5 @@
 Flow report for Gato
-Tue Oct 04 11:33:56 2022
+Tue Oct 04 17:18:52 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 04 11:33:56 2022       ;
+; Flow Status                     ; Successful - Tue Oct 04 17:18:52 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
-; Top-level Entity Name           ; Matriz                                      ;
+; Top-level Entity Name           ; GatoTop                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 18                                          ;
-; Total pins                      ; 26                                          ;
+; Total registers                 ; 17                                          ;
+; Total pins                      ; 23                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/04/2022 11:33:39 ;
+; Start date & time ; 10/04/2022 17:18:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Gato                ;
 +-------------------+---------------------+
@@ -79,33 +79,37 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 264390076026639.166490481809332        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 264390076026639.166492550403204        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; TestMover                         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; TestMatriz                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; TestTurnos                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TestMatriz                             ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TestTurnos                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; TestMover.sv                           ; --            ; --          ; TestMover                         ;
 ; EDA_TEST_BENCH_FILE                  ; TestMatriz.sv                          ; --            ; --          ; TestMatriz                        ;
+; EDA_TEST_BENCH_FILE                  ; TestTurnos.sv                          ; --            ; --          ; TestTurnos                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestMover                              ; --            ; --          ; TestMover                         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestMatriz                             ; --            ; --          ; TestMatriz                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestTurnos                             ; --            ; --          ; TestTurnos                        ;
 ; EDA_TEST_BENCH_NAME                  ; TestMover                              ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; TestMatriz                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; TestTurnos                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Matriz      ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Matriz      ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Matriz      ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; GatoTop     ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; GatoTop     ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; GatoTop     ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; Matriz                                 ; Gato          ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; GatoTop                                ; Gato          ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -114,8 +118,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4789 MB             ; 00:00:40                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4780 MB             ; 00:01:04                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:01:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
