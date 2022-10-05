@@ -3,25 +3,25 @@ clk => clk.IN2
 rst => rst.IN3
 mover => mover.IN1
 colocar => Matriz:instMatriz.boton
-matrizDeJuego[0][0] <= Matriz:instMatriz.matriz[0][0]
-matrizDeJuego[0][1] <= Matriz:instMatriz.matriz[0][1]
-matrizDeJuego[1][0] <= Matriz:instMatriz.matriz[1][0]
-matrizDeJuego[1][1] <= Matriz:instMatriz.matriz[1][1]
-matrizDeJuego[2][0] <= Matriz:instMatriz.matriz[2][0]
-matrizDeJuego[2][1] <= Matriz:instMatriz.matriz[2][1]
-matrizDeJuego[3][0] <= Matriz:instMatriz.matriz[3][0]
-matrizDeJuego[3][1] <= Matriz:instMatriz.matriz[3][1]
-matrizDeJuego[4][0] <= Matriz:instMatriz.matriz[4][0]
-matrizDeJuego[4][1] <= Matriz:instMatriz.matriz[4][1]
-matrizDeJuego[5][0] <= Matriz:instMatriz.matriz[5][0]
-matrizDeJuego[5][1] <= Matriz:instMatriz.matriz[5][1]
-matrizDeJuego[6][0] <= Matriz:instMatriz.matriz[6][0]
-matrizDeJuego[6][1] <= Matriz:instMatriz.matriz[6][1]
-matrizDeJuego[7][0] <= Matriz:instMatriz.matriz[7][0]
-matrizDeJuego[7][1] <= Matriz:instMatriz.matriz[7][1]
-matrizDeJuego[8][0] <= Matriz:instMatriz.matriz[8][0]
-matrizDeJuego[8][1] <= Matriz:instMatriz.matriz[8][1]
-win <= <GND>
+matrizDeJuego[0][0] << Matriz:instMatriz.matriz[0][0]
+matrizDeJuego[0][1] << Matriz:instMatriz.matriz[0][1]
+matrizDeJuego[1][0] << Matriz:instMatriz.matriz[1][0]
+matrizDeJuego[1][1] << Matriz:instMatriz.matriz[1][1]
+matrizDeJuego[2][0] << Matriz:instMatriz.matriz[2][0]
+matrizDeJuego[2][1] << Matriz:instMatriz.matriz[2][1]
+matrizDeJuego[3][0] << Matriz:instMatriz.matriz[3][0]
+matrizDeJuego[3][1] << Matriz:instMatriz.matriz[3][1]
+matrizDeJuego[4][0] << Matriz:instMatriz.matriz[4][0]
+matrizDeJuego[4][1] << Matriz:instMatriz.matriz[4][1]
+matrizDeJuego[5][0] << Matriz:instMatriz.matriz[5][0]
+matrizDeJuego[5][1] << Matriz:instMatriz.matriz[5][1]
+matrizDeJuego[6][0] << Matriz:instMatriz.matriz[6][0]
+matrizDeJuego[6][1] << Matriz:instMatriz.matriz[6][1]
+matrizDeJuego[7][0] << Matriz:instMatriz.matriz[7][0]
+matrizDeJuego[7][1] << Matriz:instMatriz.matriz[7][1]
+matrizDeJuego[8][0] << Matriz:instMatriz.matriz[8][0]
+matrizDeJuego[8][1] << Matriz:instMatriz.matriz[8][1]
+win << <GND>
 
 
 |GatoTop|Contador:temporizador
