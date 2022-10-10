@@ -21,4 +21,8 @@ module TestMover();
 		begin
 		mov = ~mov; #10;
 		end
+	always begin
+		#20; rst = ~rst;
+		end
+	
 endmodule 

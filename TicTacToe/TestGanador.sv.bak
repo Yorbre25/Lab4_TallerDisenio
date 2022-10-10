@@ -1,0 +1,31 @@
+module TestGanador();
+	logic clk, rst, win, pos, jugador;
+	logic [8:0][1:0] matriz;
+	
+	Matriz mat(clk, rst, pos, jugador, colocar, colocado, matriz);
+	Ganador gan(clk, rst, matriz, win);
+	
+	initial begin
+		rst = 1; #5;
+		rst = 0;
+		jugador = 0;
+		boton = 0;
+		clk = 0;
+		end
+		
+	always begin
+		#5;
+		pos = 0;
+		colocar = 1;
+		#5;
+		colocar = 0;
+		#5;
+		pos = 1;
+		colocar = 1;
+		#5;
+		colocar = 0;
+		#5;
+		pos = 2;
+		colocar = 1;
+		end
+endmodule 

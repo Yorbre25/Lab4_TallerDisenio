@@ -1,0 +1,10 @@
+module testContador();
+	logic clk, rst, timeOut;
+	Contador cont(clk, rst, timeOUt);
+	
+	
+	
+	always begin
+		clk = ~clk;
+		end
+endmodule 

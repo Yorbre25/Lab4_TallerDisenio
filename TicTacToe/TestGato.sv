@@ -5,19 +5,17 @@ module TestGato();
 	GatoTop juego(clk, rst, mover, colocar, matrizDeJuego, win);
 	
 	initial begin
-		rst = 0;
-		#5;
+		rst = 0; #5;
 		rst = 1;
 		end
 		
-	always begin
-		mover = 0;
-		colocar = 1;
+//	always begin
+//		mover = 0; 
+//		#5;
+//		colocar = 1;
+//		end
 		
-		end
-		
 	always begin
-		clk = ~clk;
-		#5;
+		clk = ~clk; #5;
 		end
 endmodule 
