@@ -1,0 +1,17 @@
+module temporizador(input clk, rst, guardado, output tiempo, output [3:0] posicion_ra);
+	reg [31:0] contador = 0;
+	always@(posedge clk, negedge rst)begin
+		if (!rst || guardado) contador = 0;
+		else begin
+			contador = contador+1;
+			if(contador == 750000000)begin
+				contador = 0;
+				tiempo <= 1;
+				posicion_ra <= $urandom_range(1,9)
+				
+			end
+			else
+				tiempo <=0;
+		end
+	end
+endmodule 

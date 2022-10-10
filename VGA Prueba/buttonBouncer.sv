@@ -1,16 +1,13 @@
+//Modulo deBouncer para los botones
 module buttonBouncer(input clk, rst, jugado, output level_out);
 	 reg DB_out;
-     //reg [3:0] counter;
     reg [6:0] seg_data;
     reg [3:0] counter_reg;
     /*
-    Parameter N defines the debounce time. Assuming 50 KHz clock,
-    the debounce time is 2^(11-1)/ 50 KHz = 20 ms
-      
-    For 50 MHz clock increase value of N accordingly to 21.
-      
+    N define el tiempo de debounce
+    Para 25 MHz clock N = 11.
     */
-    parameter N = 11 ;      
+    parameter N = 11;      
   
     reg  [N-1 : 0]  delaycount_reg;                     
     reg  [N-1 : 0]  delaycount_next;
@@ -20,7 +17,7 @@ module buttonBouncer(input clk, rst, jugado, output level_out);
     wire q_reset;
   
  
-	reg  delay_reg ; // Registers for detecting level change of DB_out
+	reg  delay_reg ; // Registro que deteca un cambio de nivel en DB_out
 
   
 	  always @ ( posedge clk or negedge rst )
@@ -31,7 +28,6 @@ module buttonBouncer(input clk, rst, jugado, output level_out);
 				  DFF2 <= 1'b0;
 				  // For level change detection
 				  delay_reg  <=  1'b0;
-
 				  delaycount_reg <= { N {1'b0} };
 			 end
 			else
@@ -39,7 +35,7 @@ module buttonBouncer(input clk, rst, jugado, output level_out);
 				  DFF1 <= jugado;
 				  DFF2 <= DFF1;
 				  delaycount_reg <= delaycount_next;
-				  delay_reg  <=  DB_out;// to detect level change
+				  delay_reg  <=  DB_out;
 			 end
 	  end
       

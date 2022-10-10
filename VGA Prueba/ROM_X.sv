@@ -1,3 +1,4 @@
+//Modulo ROM X
 module ROM_X(input [5:0] rom_addr, output [63:0] rom_data);
 	always @*
 		case (rom_addr)

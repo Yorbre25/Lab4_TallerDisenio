@@ -1,5 +1,10 @@
 
-State Machine - |vga|videoGenerador:vG|controlTOP:control|Mover:move|estadoActual
+State Machine - |vga|controlTOP:control|Ganador:ganador_|estadoActual
+Name estadoActual.1 
+estadoActual.0 0 
+estadoActual.1 1 
+
+State Machine - |vga|controlTOP:control|Mover:move|estadoActual
 Name estadoActual.0111 estadoActual.0110 estadoActual.0101 estadoActual.0100 estadoActual.0011 estadoActual.0010 estadoActual.0001 estadoActual.0000 estadoActual.1000 
 estadoActual.0000 0 0 0 0 0 0 0 0 0 
 estadoActual.0001 0 0 0 0 0 0 1 1 0 
@@ -10,8 +15,3 @@ estadoActual.0101 0 0 1 0 0 0 0 1 0
 estadoActual.0110 0 1 0 0 0 0 0 1 0 
 estadoActual.0111 1 0 0 0 0 0 0 1 0 
 estadoActual.1000 0 0 0 0 0 0 0 1 1 
-
-State Machine - |vga|videoGenerador:vG|controlTOP:control|Turnos:turno|estadoActual
-Name estadoActual.1 
-estadoActual.0 0 
-estadoActual.1 1 

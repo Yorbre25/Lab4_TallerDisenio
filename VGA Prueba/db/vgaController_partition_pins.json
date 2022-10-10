@@ -120,6 +120,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "gano",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -129,6 +133,10 @@
 				},
 				{
 					"name" : "boton2",
+					"strict" : false
+				},
+				{
+					"name" : "boton",
 					"strict" : false
 				}
 			]

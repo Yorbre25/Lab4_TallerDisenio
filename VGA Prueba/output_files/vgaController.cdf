@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(5CSEMA5F31) MfrSpec(OpMask(0) FullPath("D:/Proyectos/Taller/VGA Prueba/output_files/vgaController.sof"));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/Proyectos/Taller/VGA Prueba/output_files/") File("vgaController.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/output_files/") File("vgaController.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,3 +1,4 @@
+//Modulo para la definicion del sprite del circulo
 module sprite_Circle(input clk,
                    input [9:0] posx,posy,pixelx, pixely,
 						 output [23:0] RGB,

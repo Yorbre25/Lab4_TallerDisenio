@@ -1,3 +1,4 @@
+//Modulo que dibuja las linas que delimitan las casillas
 module lineas(input logic [9:0]cuentaX,cuentaY,
 				  output logic enable);
 				  

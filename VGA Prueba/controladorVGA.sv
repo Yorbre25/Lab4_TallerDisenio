@@ -1,3 +1,4 @@
+//Modulo que sincroniza las señales de la VGA dependiendod de la cuenta en X y Y
 module controladorVGA (input logic clock_25, //Clock de 25MHz.
 								output logic H_SYNC, V_SYNC, SYNC_B, SYNC_BLANK, //Señales de sincronización del VGA.
 								output logic [9:0]cuentaX,cuentaY);//Actuales X y Y de los contadores.

@@ -46,13 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
-set_global_assignment -name SYSTEMVERILOG_FILE contadorXY.sv
-set_global_assignment -name SYSTEMVERILOG_FILE controladorVGA.sv
-set_global_assignment -name SYSTEMVERILOG_FILE chargenrom.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rectgen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE videoGenerador.sv
-set_global_assignment -name SYSTEMVERILOG_FILE divisorClock.sv
-set_global_assignment -name SYSTEMVERILOG_FILE vga.sv
 set_location_assignment PIN_B11 -to H_SYNC
 set_location_assignment PIN_D11 -to V_SYNC
 set_location_assignment PIN_F10 -to SYNC_B
@@ -83,64 +76,26 @@ set_location_assignment PIN_G15 -to b[6]
 set_location_assignment PIN_J14 -to b[7]
 set_location_assignment PIN_A11 -to clk_25
 set_location_assignment PIN_AF14 -to clk
-set_global_assignment -name SYSTEMVERILOG_FILE divisorClk.sv
-set_global_assignment -name SYSTEMVERILOG_FILE botonMove.sv
 set_location_assignment PIN_AA14 -to boton
-set_global_assignment -name SYSTEMVERILOG_FILE deBounce.sv
-set_global_assignment -name SYSTEMVERILOG_FILE clock_enable.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Dff_enable.sv
-set_global_assignment -name TEXT_FILE charrom.txt
-set_global_assignment -name SYSTEMVERILOG_FILE square.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux4a1.sv
 set_location_assignment PIN_AA15 -to boton2
-set_global_assignment -name SYSTEMVERILOG_FILE lineas.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sleep.sv
-set_global_assignment -name SYSTEMVERILOG_FILE contadorPushButton.sv
 set_location_assignment PIN_W15 -to boton3
-set_global_assignment -name SYSTEMVERILOG_FILE deco_sprite.sv
-set_global_assignment -name SYSTEMVERILOG_FILE addressGen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE visibleLogic.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sprite_top.sv
-set_global_assignment -name MIF_FILE sprite.mif
-set_global_assignment -name QIP_FILE sprite_rom.qip
-set_global_assignment -name SYSTEMVERILOG_FILE sprite_Rick.sv
-set_global_assignment -name SYSTEMVERILOG_FILE deco_Rick.sv
-set_global_assignment -name MIF_FILE rick.mif
-set_global_assignment -name QIP_FILE rick_rom.qip
-set_global_assignment -name MIF_FILE Morty.mif
-set_global_assignment -name QIP_FILE rom_morty.qip
-set_global_assignment -name SYSTEMVERILOG_FILE deco_Morty.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sprite_Morty.sv
-set_global_assignment -name SYSTEMVERILOG_FILE contadorPushButtonSeleccionador.sv
-set_global_assignment -name SYSTEMVERILOG_FILE muxSeleccionador.sv
-set_global_assignment -name SYSTEMVERILOG_FILE deco.sv
-set_global_assignment -name SYSTEMVERILOG_FILE regfile1x24b.sv
-set_global_assignment -name SYSTEMVERILOG_FILE controlTOP.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux_9a1.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE pos_edge_det.sv
-set_global_assignment -name SYSTEMVERILOG_FILE contadorWrite.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pos_edge_det2.sv
-set_location_assignment PIN_V16 -to jugador10
-set_location_assignment PIN_W16 -to jugador11
-set_location_assignment PIN_V17 -to jugador12
-set_location_assignment PIN_V18 -to jugador13
-set_location_assignment PIN_W17 -to jugador14
-set_location_assignment PIN_W19 -to jugador15
-set_location_assignment PIN_Y19 -to jugador16
-set_location_assignment PIN_W20 -to jugador17
-set_location_assignment PIN_W21 -to jugador18
-set_global_assignment -name SYSTEMVERILOG_FILE verificar_gane.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Maquina_Estado.sv
-set_global_assignment -name SYSTEMVERILOG_FILE logica_salida.sv
-set_global_assignment -name SYSTEMVERILOG_FILE logica_juego.sv
-set_global_assignment -name SYSTEMVERILOG_FILE jugadaValida.sv
-set_global_assignment -name SYSTEMVERILOG_FILE FF.sv
-set_global_assignment -name SYSTEMVERILOG_FILE estado_siguiente.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux_gano.sv
-set_location_assignment PIN_Y21 -to output_gano
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE contadorXY.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controladorVGA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rectgen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vga.sv
+set_global_assignment -name SYSTEMVERILOG_FILE divisorClk.sv
+set_global_assignment -name SYSTEMVERILOG_FILE lineas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE muxSeleccionador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE regfile1x24b.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controlTOP.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_9a1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE spriteCircle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ROM_Circle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE spritePosition.sv
@@ -149,4 +104,25 @@ set_global_assignment -name SYSTEMVERILOG_FILE sprite_X.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Turnos.sv
 set_global_assignment -name SYSTEMVERILOG_FILE buttonBouncer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mover.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Ganador.sv
+set_location_assignment PIN_V16 -to gano
+set_global_assignment -name SYSTEMVERILOG_FILE lineaGanadoraGen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE muxSeleccionadorGanador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite_X_Ganador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE spritePosition_Ganador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ROM_X_Ganador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite_Circle_Ganador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ROM_Circle_Ganador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE temporizador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LFSR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite_Empate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ROM_Empate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE spritePosition_Empate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TestGato.sv
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH TestGato -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME TestGato -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TestGato
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TestGato -section_id TestGato
+set_global_assignment -name EDA_TEST_BENCH_FILE TestGato.sv -section_id TestGato
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

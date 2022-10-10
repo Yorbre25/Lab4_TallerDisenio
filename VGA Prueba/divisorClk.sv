@@ -1,3 +1,4 @@
+//Modulo que divide el clock de 50MHz a uno de 25MHz
 module divisorClk(input logic clock, 
 	               output logic clock_25);
 
@@ -5,6 +6,6 @@ module divisorClk(input logic clock,
 	   
 		//------------------------------------Divisor de Clock-------------------------------
 	   always @(posedge clock)
-      {clock_25, cnt} <= cnt + 16'h8000; // El clock de la DE1-SoC es de 50MHz, para llegar a 25MHz se debe dividir por 2-> (2^(16))/2 = 32768 ->Hex = 8000;
+      {clock_25, cnt} <= cnt + 16'h8000; 
 
 endmodule

@@ -1,3 +1,4 @@
+//Modulo definido para colocar los sprites de los jugadores en las ubicaciones deseadas
 module spritePosition(input [9:0] posx,posy,pixelx, pixely, input [63:0] rom_data, output [5:0] rom_addr, output visible);
 	logic [5:0] rom_col;
 	logic rom_bit, sq_circle_on;

@@ -1,0 +1,29 @@
+# Reading pref.tcl
+# do vgaController_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Programas/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA\ Prueba {C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:53:24 on Oct 09,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba" C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv 
+# -- Compiling module contadorXY
+# ** Error: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv(9): (vlog-2110) Illegal reference to net "cuentaX".
+# ** Error: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv(10): (vlog-2110) Illegal reference to net "cuentaY".
+# ** Error: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv(13): (vlog-2110) Illegal reference to net "cuentaY".
+# ** Error: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv(16): (vlog-2110) Illegal reference to net "cuentaX".
+# ** Error: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA Prueba/contadorXY.sv(16): The '++' operator is only allowed on variable lvalue expressions.
+# End time: 16:53:24 on Oct 09,2022, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: D:/Programas/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./vgaController_run_msim_rtl_verilog.do line 8
+# D:/Programas/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA\ Prueba {C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/VGA P..."

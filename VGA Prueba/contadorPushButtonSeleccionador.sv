@@ -1,6 +1,6 @@
 module  contadorPushButtonSeleccionador(
 
-input   clk, n_reset, button_in,        // inputs
+input   clk, n_reset, button_in, guardado,        // inputs
 output logic [1:0]counter
 
  
@@ -86,7 +86,7 @@ output logic [1:0]counter
     assign  level_out  =  (delay_reg)  &  (~DB_out);     
     
               
- 
+	
      
     always @(posedge  clk )begin
 	 
@@ -95,7 +95,7 @@ output logic [1:0]counter
    if ( n_reset == 0) begin
 		counter <= 1;
  
-	end else if ( level_out == 1'b1) begin
+	end else if ( level_out == 1'b1 && guardado) begin
 		counter <= 1;
 		
 		if (counter  < 2)begin
