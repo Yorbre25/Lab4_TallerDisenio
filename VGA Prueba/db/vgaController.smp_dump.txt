@@ -1,5 +1,5 @@
 
-State Machine - |vga|controlTOP:control|Ganador:ganador_|estadoActual
+State Machine - |vga|controlTOP:control|Ganador2:ganador_|estadoActual
 Name estadoActual.1 
 estadoActual.0 0 
 estadoActual.1 1 

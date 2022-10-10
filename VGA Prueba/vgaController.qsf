@@ -79,9 +79,6 @@ set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AA14 -to boton
 set_location_assignment PIN_AA15 -to boton2
 set_location_assignment PIN_W15 -to boton3
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -125,4 +122,9 @@ set_global_assignment -name EDA_TEST_BENCH_NAME TestGato -section_id eda_simulat
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TestGato
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TestGato -section_id TestGato
 set_global_assignment -name EDA_TEST_BENCH_FILE TestGato.sv -section_id TestGato
+set_global_assignment -name SYSTEMVERILOG_FILE Ganador2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE always_ganador.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -3,147 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'divisorClk:dv|clock_25'
-Slack : -4.984
-TNS   : -417.308
-
-Type  : Slow 1100mV 85C Model Setup 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : -4.669
-TNS   : -20.368
+Slack : -5.122
+TNS   : -489.047
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -0.784
-TNS   : -1.384
+Slack : -0.936
+TNS   : -1.265
 
 Type  : Slow 1100mV 85C Model Hold 'divisorClk:dv|clock_25'
-Slack : 0.245
+Slack : 0.283
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.373
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.929
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.854
-TNS   : -4.417
+Slack : -0.874
+TNS   : -3.014
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorClk:dv|clock_25'
 Slack : -0.394
-TNS   : -67.884
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.411
-TNS   : 0.000
+TNS   : -86.701
 
 Type  : Slow 1100mV 0C Model Setup 'divisorClk:dv|clock_25'
-Slack : -4.828
-TNS   : -408.302
-
-Type  : Slow 1100mV 0C Model Setup 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : -4.492
-TNS   : -19.830
+Slack : -5.053
+TNS   : -481.997
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -0.737
-TNS   : -1.291
+Slack : -0.933
+TNS   : -1.227
 
 Type  : Slow 1100mV 0C Model Hold 'divisorClk:dv|clock_25'
-Slack : 0.224
+Slack : 0.283
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.349
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.803
+Slack : 0.368
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.871
-TNS   : -4.599
+Slack : -0.874
+TNS   : -3.074
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorClk:dv|clock_25'
 Slack : -0.394
-TNS   : -66.329
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.383
-TNS   : 0.000
+TNS   : -84.351
 
 Type  : Fast 1100mV 85C Model Setup 'divisorClk:dv|clock_25'
-Slack : -2.829
-TNS   : -205.288
-
-Type  : Fast 1100mV 85C Model Setup 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : -2.265
-TNS   : -9.668
+Slack : -2.609
+TNS   : -233.014
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.297
-TNS   : -0.297
+Slack : -0.270
+TNS   : -0.270
 
 Type  : Fast 1100mV 85C Model Hold 'divisorClk:dv|clock_25'
-Slack : 0.065
+Slack : 0.094
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.161
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.344
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.777
-TNS   : -3.614
+Slack : -0.781
+TNS   : -2.422
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorClk:dv|clock_25'
-Slack : -0.014
-TNS   : -0.066
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.440
-TNS   : 0.000
+Slack : -0.110
+TNS   : -3.594
 
 Type  : Fast 1100mV 0C Model Setup 'divisorClk:dv|clock_25'
-Slack : -2.483
-TNS   : -181.673
-
-Type  : Fast 1100mV 0C Model Setup 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : -2.004
-TNS   : -8.507
+Slack : -2.327
+TNS   : -206.450
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.205
-TNS   : -0.205
+Slack : -0.202
+TNS   : -0.202
 
 Type  : Fast 1100mV 0C Model Hold 'divisorClk:dv|clock_25'
-Slack : 0.013
+Slack : 0.079
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.133
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.258
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.746
-TNS   : -3.452
+Slack : -0.736
+TNS   : -2.260
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorClk:dv|clock_25'
-Slack : 0.023
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controlTOP:control|Ganador:ganador_|estadoActual.1'
-Slack : 0.450
-TNS   : 0.000
+Slack : -0.040
+TNS   : -0.695
 
 ------------------------------------------------------------

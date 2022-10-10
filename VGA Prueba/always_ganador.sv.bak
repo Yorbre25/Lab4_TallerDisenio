@@ -1,0 +1,13 @@
+module always_ganador(input [8:0][1:0]matrizDeJuego, output juego);
+	always@*begin
+		if (((matrizDeJuego[0] == matrizDeJuego[1] && matrizDeJuego[0] == matrizDeJuego[2]) & matrizDeJuego[0] != 0)) juego <= 1;
+		else if (((matrizDeJuego[3] == matrizDeJuego[4] && matrizDeJuego[3] == matrizDeJuego[5]) & matrizDeJuego[3] != 0)) juego <= 1;
+		else if (((matrizDeJuego[6] == matrizDeJuego[7] && matrizDeJuego[6] == matrizDeJuego[8]) & matrizDeJuego[6] != 0)) juego <= 1;
+		else if (((matrizDeJuego[0] == matrizDeJuego[3] && matrizDeJuego[0] == matrizDeJuego[6]) & matrizDeJuego[0] != 0)) juego <= 1;
+		else if (((matrizDeJuego[1] == matrizDeJuego[4] && matrizDeJuego[1] == matrizDeJuego[7]) & matrizDeJuego[1] != 0)) juego <= 1;
+		else if (((matrizDeJuego[2] == matrizDeJuego[5] && matrizDeJuego[2] == matrizDeJuego[8]) & matrizDeJuego[2] != 0)) juego <= 1;
+		else if (((matrizDeJuego[0] == matrizDeJuego[4] && matrizDeJuego[0] == matrizDeJuego[8]) & matrizDeJuego[0] != 0)) juego <= 1;
+		else if (((matrizDeJuego[2] == matrizDeJuego[4] && matrizDeJuego[2] == matrizDeJuego[6]) & matrizDeJuego[2] != 0)) juego <= 1;
+		else juego<=0;
+	end
+endmodule 

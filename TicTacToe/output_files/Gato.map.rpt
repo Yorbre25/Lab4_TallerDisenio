@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Wed Oct 05 17:16:24 2022
+Mon Oct 10 16:47:22 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |Ganador|estadoActual
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 05 17:16:24 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 10 16:47:22 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
-; Top-level Entity Name           ; Contador                                    ;
+; Top-level Entity Name           ; Ganador                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 3                                           ;
+; Total registers                 ; 1                                           ;
+; Total pins                      ; 21                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Contador           ; Gato               ;
+; Top-level entity name                                                           ; Ganador            ; Gato               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,51 +156,53 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; Contador.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; Ganador.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv        ;         ;
+; always_ganador.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/always_ganador.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 3     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 3     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 10                        ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 11                        ;
+;     -- 7 input functions                    ; 0                         ;
+;     -- 6 input functions                    ; 8                         ;
+;     -- 5 input functions                    ; 3                         ;
+;     -- 4 input functions                    ; 0                         ;
+;     -- <=3 input functions                  ; 0                         ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 1                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 21                        ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; matrizDeJuego[0][0]~input ;
+; Maximum fan-out                             ; 4                         ;
+; Total fan-out                               ; 88                        ;
+; Average fan-out                             ; 1.63                      ;
++---------------------------------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,9 +210,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Contador                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 3    ; 0            ; |Contador           ; Contador    ; work         ;
+; |Ganador                   ; 11 (11)             ; 1 (1)                     ; 0                 ; 0          ; 21   ; 0            ; |Ganador            ; Ganador     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------+
+; State Machine - |Ganador|estadoActual ;
++----------------+----------------------+
+; Name           ; estadoActual.1       ;
++----------------+----------------------+
+; estadoActual.0 ; 0                    ;
+; estadoActual.1 ; 1                    ;
++----------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -217,10 +231,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -232,13 +246,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 3                           ;
+; arriav_ff             ; 1                           ;
+;     CLR               ; 1                           ;
+; arriav_lcell_comb     ; 11                          ;
+;     normal            ; 11                          ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -247,7 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -257,55 +274,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 05 17:15:55 2022
+    Info: Processing started: Mon Oct 10 16:46:56 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
-    Info (12023): Found entity 1: Contador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
+    Info (12023): Found entity 1: Contador File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ganador.sv
-    Info (12023): Found entity 1: Ganador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 1
+    Info (12023): Found entity 1: Ganador File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mover.sv
-    Info (12023): Found entity 1: Mover File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv Line: 7
+    Info (12023): Found entity 1: Mover File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Mover.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file turnos.sv
-    Info (12023): Found entity 1: Turnos File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv Line: 1
+    Info (12023): Found entity 1: Turnos File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Turnos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testmover.sv
-    Info (12023): Found entity 1: TestMover File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMover.sv Line: 1
+    Info (12023): Found entity 1: TestMover File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestMover.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file matriz.sv
-    Info (12023): Found entity 1: Matriz File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv Line: 10
+    Info (12023): Found entity 1: Matriz File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Matriz.sv Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file testmatriz.sv
-    Info (12023): Found entity 1: TestMatriz File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv Line: 1
+    Info (12023): Found entity 1: TestMatriz File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestMatriz.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file gatotop.sv
-    Info (12023): Found entity 1: GatoTop File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
+    Info (12023): Found entity 1: GatoTop File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testgato.sv
-    Info (12023): Found entity 1: TestGato File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestGato.sv Line: 1
+    Info (12023): Found entity 1: TestGato File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestGato.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testturnos.sv
-    Info (12023): Found entity 1: TestTurnos File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 1
+    Info (12023): Found entity 1: TestTurnos File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestTurnos.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file todo.sv
 Info (12021): Found 1 design units, including 1 entities, in source file testganador.sv
-    Info (12023): Found entity 1: TestGanador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestGanador.sv Line: 1
+    Info (12023): Found entity 1: TestGanador File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestGanador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testcontador.sv
-    Info (12023): Found entity 1: TestContador File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestContador.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at TestContador.sv(3): created implicit net for "timeOUt" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/TestContador.sv Line: 3
-Critical Warning (10846): Verilog HDL Instantiation warning at GatoTop.sv(14): instance has no name File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 14
-Info (12127): Elaborating entity "Contador" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Contador.sv(9): truncated value with size 32 to match size of target (5) File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 9
-Warning (10240): Verilog HDL Always Construct warning at Contador.sv(12): inferring latch(es) for variable "sAux", which holds its previous value in one or more paths through the always construct File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 12
-Info (10041): Inferred latch for "sAux" at Contador.sv(12) File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 12
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "s" is stuck at VCC File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
+    Info (12023): Found entity 1: TestContador File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestContador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file always_ganador.sv
+    Info (12023): Found entity 1: always_ganador File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/always_ganador.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at TestContador.sv(3): created implicit net for "timeOUt" File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/TestContador.sv Line: 3
+Critical Warning (10846): Verilog HDL Instantiation warning at Ganador.sv(10): instance has no name File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at GatoTop.sv(14): instance has no name File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/GatoTop.sv Line: 14
+Info (12127): Elaborating entity "Ganador" for the top level hierarchy
+Info (12128): Elaborating entity "always_ganador" for hierarchy "always_ganador:comb_12" File: C:/Users/Lenovo/Documents/GitHub/Lab4_TallerDisenio/TicTacToe/Ganador.sv Line: 10
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
-    Warning (15610): No output dependent on input pin "rst" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab4_TallerDisenio/TicTacToe/Contador.sv Line: 1
-Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Wed Oct 05 17:16:24 2022
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:01:05
+    Info (21061): Implemented 11 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Mon Oct 10 16:47:22 2022
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:01:04
 
 

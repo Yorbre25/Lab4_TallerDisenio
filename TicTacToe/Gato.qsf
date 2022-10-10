@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY Contador
+set_global_assignment -name TOP_LEVEL_ENTITY Ganador
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:53:47  SEPTEMBER 09, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -86,9 +86,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME TestGanador -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TestGanador
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TestGanador -section_id TestGanador
 set_global_assignment -name SYSTEMVERILOG_FILE TestContador.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE TestMover.sv -section_id TestMover
 set_global_assignment -name EDA_TEST_BENCH_FILE TestMatriz.sv -section_id TestMatriz
 set_global_assignment -name EDA_TEST_BENCH_FILE TestTurnos.sv -section_id TestTurnos
@@ -98,4 +95,8 @@ set_global_assignment -name EDA_TEST_BENCH_NAME TestContador -section_id eda_sim
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TestContador
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TestContador -section_id TestContador
 set_global_assignment -name EDA_TEST_BENCH_FILE TestContador.sv -section_id TestContador
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE always_ganador.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

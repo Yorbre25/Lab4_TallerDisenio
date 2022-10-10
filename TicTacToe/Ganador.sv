@@ -6,24 +6,15 @@ module Ganador(input clk, rst, input[8:0][1:0] matrizDeJuego, output win);
 			estadoActual = 0;
 		else
 			estadoActual = estadoSiguiente;
-		
+	logic juego;
+	always_ganador(matrizDeJuego, juego);
 	always_comb
 		case(estadoActual)
-		0:
-			if( (matrizDeJuego[0] == matrizDeJuego[1] == matrizDeJuego[2]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-1-2
-				else if( (matrizDeJuego[3] == matrizDeJuego[4] == matrizDeJuego[5]) & matrizDeJuego[3] != 0) estadoSiguiente = 1; //3-4-5
-				else if( (matrizDeJuego[6] == matrizDeJuego[7] == matrizDeJuego[8]) & matrizDeJuego[6] != 0) estadoSiguiente = 1;	//6-7-8
-				else if( (matrizDeJuego[0] == matrizDeJuego[3] == matrizDeJuego[6]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-3-6
-				else if( (matrizDeJuego[1] == matrizDeJuego[4] == matrizDeJuego[7]) & matrizDeJuego[1] != 0) estadoSiguiente = 1; //1-4-7
-				else if( (matrizDeJuego[2] == matrizDeJuego[5] == matrizDeJuego[8]) & matrizDeJuego[2] != 0) estadoSiguiente = 1; //2-5-8
-				else if( (matrizDeJuego[0] == matrizDeJuego[4] == matrizDeJuego[8]) & matrizDeJuego[0] != 0) estadoSiguiente = 1; //0-4-8
-				else if( (matrizDeJuego[2] == matrizDeJuego[4] == matrizDeJuego[6]) & matrizDeJuego[2] != 0) estadoSiguiente = 1; //2-4-6
-			else
-				estadoSiguiente = 0;
-		1: estadoSiguiente = 1; //Temporal
+		0: if(juego) estadoSiguiente = 1; else estadoSiguiente = 0;
+		1: estadoSiguiente = 1;
 		default: estadoSiguiente  = 0;
 		endcase
 	
-	assign win = estadoActual;
+	assign win = (estadoActual==1);
 	
-endmodule
+endmodule 

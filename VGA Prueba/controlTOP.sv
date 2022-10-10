@@ -86,7 +86,7 @@ module controlTOP (input logic boton_Casilla, boton_Sel,boton_rst,clk,
 			 	 
 			//------------------------------Instancia de la lógica del juego--------------------//
 			
-			Ganador ganador_(clk, boton_rst,rdData, gano, linea_ganadora, ganador);
+			Ganador2 ganador_(clk, boton_rst,rdData, gano, linea_ganadora, ganador);
 			
 			//------------------------------Linea ganadora y ganador--------------------//
 			
